@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/widgets/login_form.dart';
 import "package:shop_app/widgets/widgets.dart" show LoginBackground;
 
 class LoginView extends StatelessWidget {
@@ -8,11 +9,12 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: const [
-          LoginBackground(),
-        ],
-      ),
+      body: LoginBackground(
+          child: SingleChildScrollView(
+        child: Column(
+          children: const [SizedBox(height: 220), LoginForm()],
+        ),
+      )),
     );
   }
 }
