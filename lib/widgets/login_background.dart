@@ -20,12 +20,12 @@ class Banner extends StatelessWidget {
     const icon = Icon(
       Icons.account_circle_sharp,
       size: 130,
-      color: Colors.white,
+      color: Colors.white38,
     );
     return Container(
       height: size * 0.4,
       width: double.infinity,
-      color: Colors.indigo,
+      color: Colors.indigo[200],
       child: icon,
     );
   }
