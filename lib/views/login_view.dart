@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/providers/login_form_provider.dart';
 import 'package:shop_app/widgets/login_form.dart';
 import "package:shop_app/widgets/widgets.dart" show LoginBackground;
 
@@ -12,7 +14,13 @@ class LoginView extends StatelessWidget {
       body: LoginBackground(
           child: SingleChildScrollView(
         child: Column(
-          children: const [SizedBox(height: 220), LoginForm()],
+          children: [
+            const SizedBox(height: 240),
+            ChangeNotifierProvider(
+              create: (_) => LoginFormProvider(),
+              child: const LoginForm(),
+            ),
+          ],
         ),
       )),
     );

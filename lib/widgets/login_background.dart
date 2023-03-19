@@ -7,7 +7,7 @@ class LoginBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [const BottomContainer(), const Banner(), child]);
+    return Stack(children: [const Banner(), child]);
   }
 }
 
@@ -16,16 +16,15 @@ class Banner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size.height;
     const icon = Icon(
       Icons.account_circle_sharp,
-      size: 130,
+      size: 120,
       color: Colors.white38,
     );
     return Container(
-      height: size * 0.4,
+      height: 400,
       width: double.infinity,
-      color: Colors.indigo[200],
+      color: Colors.indigo,
       child: icon,
     );
   }
